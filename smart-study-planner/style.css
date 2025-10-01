@@ -1,0 +1,163 @@
+/* 🌟 General Styles */
+body {
+  background: #f5f6fa;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  background: linear-gradient(90deg, #e3e6e8, #000202);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  animation: fadeInDown 1s ease;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+nav button:hover {
+  transform: scale(1.05);
+  background: #eee;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin: 1.5rem 0;
+}
+
+/* ✅ Task List */
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+#task-list li:hover {
+  transform: translateX(5px);
+}
+
+/* 🗂️ Kanban Board */
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.kanban-column {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 30%;
+  min-height: 300px;
+  border: 2px dashed #ccc;
+  transition: background 0.3s;
+}
+
+.kanban-column:hover {
+  background: #f0faff;
+}
+
+.kanban-task {
+  background: #eaf4ff;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: grab;
+  transition: transform 0.2s, background 0.3s;
+}
+.kanban-task:hover {
+  transform: scale(1.05);
+  background: #d6ebff;
+}
+
+/* 📊 Progress Bar */
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0%;
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  transition: width 0.5s ease-in-out;
+}
+
+/* 🎮 Badges */
+#badges img {
+  width: 50px;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+#badges img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #1e1e2f;
+  color: #f5f5f5;
+}
+body.dark header {
+  background: linear-gradient(90deg, #141e30, #243b55);
+}
+body.dark nav button {
+  background: #333;
+  color: #f5f5f5;
+}
+body.dark .kanban-column {
+  background: #2c2c3c;
+  border-color: #555;
+}
+body.dark .kanban-task {
+  background: #3c3c4c;
+}
+
+/* ✨ Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}

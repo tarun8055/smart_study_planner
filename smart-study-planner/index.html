@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">📚 Smart Study Planner</h1>
+    <nav>
+      <button id="show-tasks">Tasks</button>
+      <button id="show-kanban">Kanban</button>
+      <button id="show-calendar">Calendar</button>
+      <button id="show-stats">Stats</button>
+      <button id="dark-toggle" title="Toggle Dark Mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Task Section -->
+    <section id="task-section" class="fade-in">
+      <h2>My Tasks</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required />
+        <input type="date" id="task-deadline" required />
+        <select id="task-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+
+    <!-- Kanban Section -->
+    <section id="kanban-section" class="hidden fade-in">
+      <h2>Kanban Board</h2>
+      <div class="kanban-board">
+        <div class="kanban-column" data-status="todo">
+          <h3>To Do</h3>
+          <div class="kanban-tasks" id="todo"></div>
+        </div>
+        <div class="kanban-column" data-status="inprogress">
+          <h3>In Progress</h3>
+          <div class="kanban-tasks" id="inprogress"></div>
+        </div>
+        <div class="kanban-column" data-status="done">
+          <h3>Done ✅</h3>
+          <div class="kanban-tasks" id="done"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar-section" class="hidden fade-in">
+      <h2>Study Calendar</h2>
+      <div id="calendar"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats-section" class="hidden fade-in">
+      <h2>Progress & Gamification</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p id="progress-text">0% Completed</p>
+
+      <h3>🎮 Gamification</h3>
+      <p>XP: <span id="xp">0</span></p>
+      <p>Level: <span id="level">1</span></p>
+      <p>Streak: <span id="streak">0</span> days</p>
+      <div id="badges"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🚀 Built for Edunet Project – Interactive Smart Study Planner</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
